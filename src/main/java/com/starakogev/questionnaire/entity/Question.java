@@ -21,6 +21,7 @@ public class Question {
     private String answerOne;
     @Column
     private String answerTwo;
-    @Column
-    private Long questionnaireId;
+    @ManyToOne
+    @JoinColumn(name = "questionnaire_id")
+    private Questionnaire questionnaire;
 }
